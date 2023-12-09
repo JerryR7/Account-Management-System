@@ -1,0 +1,19 @@
+﻿@model AccountManagementSystem.Web.DTOs.ViewModel.RecordIndexViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+<div class="container mt-5 col-7">
+    <main>
+        <div class="container-fluid px-4">
+            <div class="mt-5">
+                <h2>Create Record</h2>
+                @Html.Partial("~/Web/Views/Records/CreatePartial.cshtml", Model.Record)
+            </div>
+            <div class="mt-5">
+                <h2>Records</h2>
+                @await Html.PartialAsync("~/Web/Views/Records/TablePartial.cshtml", Model.Records)
+            </div>
+        </div>
+    </main>
+</div>

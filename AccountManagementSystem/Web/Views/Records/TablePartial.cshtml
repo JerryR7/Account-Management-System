@@ -1,0 +1,21 @@
+﻿@model IEnumerable<AccountManagementSystem.Web.DTOs.ViewModel.RecordViewModel>
+
+<table class="table table-light table-striped table-hover table-bordered border-dark-subtle table-sm">
+    <thead class="table-dark">
+    <tr>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Remark</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var record in Model)
+    {
+        <tr>
+            <td>@record.Amount</td>
+            <td>@record.Date.ToString("yyyy-MM-dd")</td>
+            <td>@record.Remark</td>
+        </tr>
+    }
+    </tbody>
+</table>
